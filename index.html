@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Busiverse</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Busiverse Blockchain</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
 </head>
-<body>
-<h1>Busiverse</h1>
-<p>This is busiverse</p>
+<body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Busiverse Blockchain</h1>
+      <button class="md:hidden" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#features" class="hover:text-blue-400">Features</a></li>
+        <li><a href="#roadmap" class="hover:text-blue-400">Roadmap</a></li>
+        <li><a href="#community" class="hover:text-blue-400">Community</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+    </div>
+    <ul id="mobile-menu" class="md:hidden hidden p-4 space-y-2">
+      <li><a href="#features" class="block hover:text-blue-400">Features</a></li>
+      <li><a href="#roadmap" class="block hover:text-blue-400">Roadmap</a></li>
+      <li><a href="#community" class="block hover:text-blue-400">Community</a></li>
+      <li><a href="#contact" class="block hover:text-blue-400">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="text-center py-20 px-4">
+    <h2 class="text-4xl font-bold mb-4">The Future of Decentralized Blockchain</h2>
+    <p class="text-lg text-gray-300 mb-6">Join the revolution. Secure. Scalable. Built for utility.</p>
+    <a href="#contact" class="bg-blue-600 px-6 py-3 rounded hover:bg-blue-700">Get Involved</a>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 bg-gray-800">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-8">Key Features</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-700 rounded">
+          <h4 class="text-xl font-bold mb-2">Fast Transactions</h4>
+          <p class="text-gray-300">Experience lightning-fast transaction speeds on a secure decentralized network.</p>
+        </div>
+        <div class="p-6 bg-gray-700 rounded">
+          <h4 class="text-xl font-bold mb-2">Scalable Architecture</h4>
+          <p class="text-gray-300">Our Layer 1 chain is designed to scale with demand.</p>
+        </div>
+        <div class="p-6 bg-gray-700 rounded">
+          <h4 class="text-xl font-bold mb-2">Developer Friendly</h4>
+          <p class="text-gray-300">Comprehensive docs and toolkits for easy dApp development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="py-16">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-8">Roadmap</h3>
+      <p class="text-gray-400">From testnet to ecosystem expansion — explore our multi-phase journey.</p>
+      <img src="roadmap_summary.png" alt="Blockchain Roadmap" class="mx-auto mt-8 rounded shadow-lg">
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section id="community" class="py-16 bg-gray-800">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-8">Join the Community</h3>
+      <p class="text-gray-300 mb-6">Connect with fellow developers, validators, and enthusiasts.</p>
+      <div class="flex justify-center space-x-6">
+        <a href="#" class="hover:text-blue-400">Discord</a>
+        <a href="#" class="hover:text-blue-400">Telegram</a>
+        <a href="#" class="hover:text-blue-400">Twitter</a>
+        <a href="#" class="hover:text-blue-400">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-4">Get In Touch</h3>
+      <p class="text-gray-300 mb-8">Reach out for collaborations, questions, or early access.</p>
+      <form class="max-w-xl mx-auto">
+        <input type="text" placeholder="Your Name" class="w-full mb-4 px-4 py-2 rounded text-black" required>
+        <input type="email" placeholder="Email Address" class="w-full mb-4 px-4 py-2 rounded text-black" required>
+        <textarea placeholder="Message" rows="4" class="w-full mb-4 px-4 py-2 rounded text-black" required></textarea>
+        <button type="submit" class="bg-blue-600 px-6 py-2 rounded hover:bg-blue-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-4 text-center text-sm text-gray-400">
+    &copy; 2025 MyBlockchain. All rights reserved.
+  </footer>
 </body>
 </html>
